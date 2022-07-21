@@ -26,12 +26,12 @@ global.owner = ['6288804947282','6288804947282'] //owner number, u can put multi
 global.pemilik = ['6288804947282'] //another owner number
 global.premium = ['6288804947282'] //premium number
 global.pengguna = 'Gojo Satoru' //username
-global.botnma = 'GojoSatoruBotz' //bot name
-global.ownernma = 'Gojo Satoru' //owner name
+global.botnma = 'Yamato' //bot name
+global.ownernma = 'Gojo Satoru //owner name
 global.packname = 'GojoSatoruBotz' //sticker package name
 global.author = 'By Gojo' //sticker author name
 global.sessionName = 'session' //session name
-global.prefa = ['#','!','/',''] //prefix
+global.prefa = [' ',#','!','/',''] //prefix
 global.sp = '⭔' //design
 global.mess = {
     success: 'Done ✓',
