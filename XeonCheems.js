@@ -753,7 +753,7 @@ Please @${m.mentionedJid[0].split`@`[0]} to type accept/reject`
             let member = participants.map(u => u.id)
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
-            let jawab = `👫Your match is
+            let jawab = `Your match is
 
 @${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
             let ments = [me, jodoh]
@@ -769,7 +769,7 @@ Please @${m.mentionedJid[0].split`@`[0]} to type accept/reject`
             let orang = member[Math.floor(Math.random() * member.length)]
             let jodoh = member[Math.floor(Math.random() * member.length)]
             let jawab = `@${orang.split('@')[0]} ❤️ @${jodoh.split('@')[0]}
-Ciee Whats Going On💖👀`
+Ciee jadian💖👀`
             let menst = [orang, jodoh]
             let buttons = [
                         { buttonId: '❤️congrats', buttonText: { displayText: '❤️congrats' }, type: 1 }
@@ -886,9 +886,9 @@ break
                 if (!m.isGroup) throw mess.group
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
-let teks = `══✪〘 *👥 Tag All* 〙✪══
+let teks = `----〘 *Tag All* 〙----
  
- ➲ *Message : ${q ? q : 'blank'}*\n\n`
+⭔ *Pesan : ${q ? q : 'blank'}*\n\n`
                 for (let mem of participants) {
                 teks += `⭔ @${mem.id.split('@')[0]}\n`
                 }
@@ -1120,8 +1120,8 @@ case 'antilink':
 						if (isAntiLink) return reply('Already Activated')
 						antilink.push(m.chat)
 						fs.writeFileSync('./database/antilink.json', JSON.stringify(antilink))
-						reply('Successfully activated the antilink feature')
-						XeonBotInc.sendMessage(m.chat,  {text: `ALLERT!!! This group has been installed anti-link\nIf you violate then I will kick`})
+						reply('Sukses Menyalakan antilink')
+						XeonBotInc.sendMessage(m.chat,  {text: `PERHATIAN!!! Grup ini telah dipasang anti-link\nJika Anda melanggar maka saya akan Mengeluarkan anda`})
 					} else if (args[0] === 'off') {
 						if (!isAntiLink) return reply('already deactivated')
 						var ini = antilink.indexOf(m.chat)
@@ -1938,7 +1938,7 @@ message = await prepareWAMessageMedia({ image : { url: anu.thumbnail } }, { uplo
 ⭔ Like : ${anu.like}
 ⭔ Caption : ${anu.caption}
 ⭔ Url : ${anu.media[0]}
-To download media, please click one of the buttons below or enter the ytmp3/ytmp4 command with the url above
+To download Media, please click one of the buttons below or enter the ytmp3/ytmp4 command with the url above
 `,
 			footer: XeonBotInc.user.name,
 			buttons,
@@ -2123,7 +2123,7 @@ ${Object.entries(global.db.sticker).map(([key, value], index) => `${index + 1}. 
                 if (!m.quoted) throw 'Reply Message!'
                 if (!m.quoted.fileSha256) throw 'SHA256 Hash Missing'
                 let hash = m.quoted.fileSha256.toString('base64')
-                if (!(hash in global.db.sticker)) throw 'Hash not found in database'
+                if (!(hash in global.db.sticker)) throw 'Tidak ada di Database'
                 global.db.sticker[hash].locked = !/^un/i.test(command)
                 reply('Done!')
             }
@@ -2142,7 +2142,7 @@ View list of message with ${prefix}listmsg`)
             }
             break
             case 'getmsg': {
-                if (!text) throw `Example : ${prefix + command} msg name\n\nView message list with ${prefix}listmsg`
+                if (!text) throw `Contoh : ${prefix + command} msg name\n\nLihat List chat di ${prefix}listmsg`
                 let msgs = global.db.database
                 if (!(text.toLowerCase() in msgs)) throw `'${text}' not registered in message list`
                 XeonBotInc.copyNForward(m.chat, msgs[text.toLowerCase()], true)
@@ -2170,12 +2170,12 @@ View list of message with ${prefix}listmsg`)
 				this.anonymous = this.anonymous ? this.anonymous : {}
 				let buttons = [{
                                 urlButton: {
-                                    displayText: 'Report Bug🐛',
-                                    url: 'https://wa.me/916909137213?text=hello+bro+i+found+a+bug+in+your+bot'
+                                    displayText: 'Report Bug',
+                                    url: 'https://wa.me/88804947282?text=Hallo+Banj+Yamato+di+Botmu+Ada+Bug'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '👻Start Anonymous👻',
+                                    displayText: 'Start Anonymous',
                                     id: 'start'
                                 }
                             }]
@@ -2251,7 +2251,7 @@ case 'sendkontak': case 'sendcontact': {
                         },
                     }
                     let buttons = [
-                        { buttonId: 'keluar', buttonText: { displayText: '😏Stop😏' }, type: 1 }
+                        { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
                     ]
                     await XeonBotInc.sendButtonText(m.chat, buttons, `_Please Wait, Looking For A Partner_`, XeonBotInc.user.name, m)
                 }
@@ -2263,19 +2263,19 @@ case 'sendkontak': case 'sendcontact': {
                 let romeo = Object.values(this.anonymous).find(room => room.check(m.sender))
                 if (!romeo) {
                     let buttons = [
-                        { buttonId: 'start', buttonText: { displayText: '🚶Start🚶' }, type: 1 }
+                        { buttonId: 'start', buttonText: { displayText: 'Start' }, type: 1 }
                     ]
                     await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Not In Anonymous Session, Press The Button To Find A Partner\`\`\``)
                     throw false
                 }
                 let other = romeo.other(m.sender)
-                if (other) await XeonBotInc.sendText(other, `\`\`\`Partner Has Left Anonymous Session\`\`\``, m)
+                if (other) await XeonBotInc.sendText(other, `\`\`\`Partner Meninggalkan Chat\`\`\``, m)
                 delete this.anonymous[romeo.id]
                 let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
                 if (room) {
                     let buttons = [
-                        { buttonId: 'next', buttonText: { displayText: '🍃Skip🍃' }, type: 1 },
-                        { buttonId: 'keluar', buttonText: { displayText: '😏Stop😏' }, type: 1 }
+                        { buttonId: 'next', buttonText: { displayText: 'Skip' }, type: 1 },
+                        { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
                     ]
                     await XeonBotInc.sendButtonText(room.a, buttons, `\`\`\`Successfully Found Partner, now you can send message\`\`\``, XeonBotInc.user.name, m)
                     room.b = m.sender
@@ -2296,7 +2296,7 @@ case 'sendkontak': case 'sendcontact': {
                         },
                     }
                     let buttons = [
-                        { buttonId: 'keluar', buttonText: { displayText: '😏Stop😏' }, type: 1 }
+                        { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
                     ]
                     await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`Please wait, looking for a partner\`\`\``, XeonBotInc.user.name, m)
                 }
@@ -2375,8 +2375,7 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
                     }
                     break 
 case 'tes': case 'test': case 'alive': case 'bot': case 'robot': case 'cheems': case 'doge':{
-                anu = `Hi ${pushname}
-Cheems Bot With You Forever!! 🐶🤚`
+                 anu = ! 🐶🤚`
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
@@ -2392,7 +2391,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             }, {
                             	urlButton: {
                                 displayText: 'Script',
-                                    url: 'https://github.com/reza838'
+                                    url: 'https://github.com/OrochimaruBotz'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2420,46 +2419,39 @@ break
             case 'list': case 'menu': case 'help': case '?': {
             	timestampe = speed();
 latensie = speed() - timestampe
-                anu = ``
+                anu = `Hi ${pushname}
+GojoBot Disini🙏`
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./XeonMedia/cheemspic.jpg')},
-                            hydratedFooterText: `Hi 🤚 ${pushname}
-How Are You? 😊
+                            hydratedFooterText: `Hi Sayang ${pushname}🥰
+Apa Kabar sayang?🥰
 
 
 ❏「 INFO BOT 」
 
 𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botnma}
-𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownernma}
+𝗕𝗼𝘁 𝗡𝗮𝗺a : ${global.botnma}
+𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺a : Yamato Tampan
 𝗢𝘄𝗻𝗲𝗿 𝗡𝘂𝗺𝗯𝗲𝗿 : ${global.owner}
 𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
 
-❏「 SOCIAL MEDIA 」
-
-IG = https://www.instagram.com/reteam.id/
-YT = https://youtu.be/_HmhBUN7B-4
-WEB = reteam.com
-OWNER = https://wa.me/6288217843188
-
-
-Please Select Button Below
+Silahkan Memilih button di bawah ini
 `,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'YouTube',
-                                    url: 'https://youtu.be/_HmhBUN7B-4'
+                                    displayText: 'Nomer Owner',
+                                    url: '+62 888-0494-7282'
                                 }
                             }, {
                             	urlButton: {
                                 displayText: 'Script',
-                                    url: 'https://github.com/reza838'
+                                    url: 'https://github.com/OrochimaruBotz'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2496,7 +2488,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"rows": [
 									{
 										"title": "Group Menu",
-										"description": "Displays The List Of Group Features",
+										"description": "Menampilkan menu group",
 										"rowId": `${prefix}grupmenu`
 									}
 								]
@@ -2506,7 +2498,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"rows": [
 									{
 										"title": "All Menu",
-										"description": "Displays The List Of All The Features!",
+										"description": "Menampilkan semua menu Gojoboj",
 										"rowId": `${prefix}allmenu`
 									},
 									{
