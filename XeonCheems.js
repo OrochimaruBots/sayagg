@@ -590,11 +590,11 @@ Please @${m.mentionedJid[0].split`@`[0]} to type accept/reject`
             }
             break
 	    case 'donasi': case 'donate': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
-                XeonBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/6ba2aed566865a068e91f.jpg' }, caption: `*Hi bro ${m.pushName}*\n\n Bot Rental Price\n⭔ 10k Per Group via pulsa 1 Month\n\nFor more details, you can chat with the owner\nhttps://wa.me/6288217843188 (Owner)\n\nDonate Me : \n\n⭔ Pulsa : 088217843188\n⭔ Pay : 088217843188 ` }, { quoted: m })
+                XeonBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/6ba2aed566865a068e91f.jpg' }, caption: `*Hi bro ${m.pushName}*\n\n Bot Rental Price\n⭔ 10k Per Group via pulsa 1 Month\n\nFor more details, you can chat with the owner\nhttps://wa.me/6288804947282 (Owner)\n\nDonate Me : \n\n⭔ Pulsa : 088804947282\n⭔ Pay : 088804947282 ` }, { quoted: m })
             }
             break
             case 'sc': case 'script': {
-                reply('Script : https://github.com/reza838\n Dont Forget To Give Star\n\nYoutube : https://youtu.be/_HmhBUN7B-4\n Dont Forget To Subscribe')
+                reply('Script : https://github.com/OrochimaruBotz\n Dont Forget To Give Star\n\nYoutube : https://youtu.be/_HmhBUN7B-4\n Dont Forget To Subscribe')
             }
             break
             case 'chat': {
@@ -1347,7 +1347,7 @@ case 'antilink':
         }
         break
             case 'emojimix': {
-	        if (!text) throw `Example : ${prefix + command} 😅+🤔`
+	        if (!text) throw `Example : ${prefix + command} 🥰+🥶`
 		let [emoji1, emoji2] = text.split`+`
 		let anu = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
 		for (let res of anu.results) {
@@ -2375,7 +2375,7 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
                     }
                     break 
 case 'tes': case 'test': case 'alive': case 'bot': case 'robot': case 'cheems': case 'doge':{
-                 anu = ! 🐶🤚`
+                 anu = `🥶🤚`
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
